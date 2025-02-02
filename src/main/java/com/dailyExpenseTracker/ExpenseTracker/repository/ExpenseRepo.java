@@ -1,4 +1,4 @@
-package com.dailyExpenseTracker.ExpenseTracker.Repository;
+package com.dailyExpenseTracker.ExpenseTracker.repository;
 
 import com.dailyExpenseTracker.ExpenseTracker.entity_dao.ExpenseEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
