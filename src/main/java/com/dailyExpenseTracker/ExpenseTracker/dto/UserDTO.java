@@ -9,5 +9,5 @@ import lombok.*;
 public class UserDTO {
     private Long id;
     private String name;
-    private String email;
+    private String email;// password has been removed as we don't want to access it directly from DB.
 }

@@ -6,6 +6,8 @@ import com.dailyExpenseTracker.ExpenseTracker.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
     private final UserRepo userRepo;
@@ -19,6 +21,10 @@ public class UserService {
         UserEntity userEntity=UserEntity.builder().name(userDTO.getName()).email(userDTO.getEmail()).password("randomPassword").build();
         UserEntity savedUser=userRepo.save(userEntity);
         return mapToDTO(savedUser);
+    }
+    public List<UserDTO> getAll(UserDTO userDTO){
+        List<UserEntity> user=userRepo.findAll();
+        return mapToDTO();
     }
     private UserDTO mapToDTO(UserEntity userEntity) {
         return UserDTO.builder()
