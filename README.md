@@ -47,3 +47,15 @@ The application follows a layered architecture:
 ```bash
 git clone https://github.com/yourusername/expense-tracker.git
 cd expense-tracker
+
+spring.datasource.url=jdbc:mysql://localhost:3306/expensetracker
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+
+mvn spring-boot:runmvn clean install
+mvn spring-boot:run
